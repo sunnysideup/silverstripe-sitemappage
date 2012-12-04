@@ -1,0 +1,39 @@
+###############################################
+Site Map Page
+Pre 0.1 proof of concept
+###############################################
+
+Developer
+-----------------------------------------------
+Nicolaas Francken [at] sunnysideup.co.nz
+
+Requirements
+-----------------------------------------------
+SilverStripe 2.3+
+SEE CONFIG file!
+
+
+
+Documentation
+-----------------------------------------------
+Adds a basic sitemap page to your site with plenty
+of customistation options (themed CSS).
+
+Installation Instructions
+-----------------------------------------------
+1. Find out how to add modules to SS and add module as per usual.
+2. copy configurations from this module's _config.php file
+into mysite/_config.php file and edit settings as required.
+NB. the idea is not to edit the module at all, but instead customise
+it from your mysite folder, so that you can upgrade the module without redoing the settings.
+SEE CONFIG file!
+
+3. IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+add the following code to your Page.php Page Class (NOT CONTROLLER CLASS):
+
+	function SiteMapPages() {
+		return DataObject::get("SiteTree", "ParentID = ".$this->ID." AND ShowInMenus = 1 AND ClassName <> 'SiteMapPage'");
+	}
+
+
+you can edit this function as you see fit!

@@ -1,0 +1,29 @@
+
+/**
+ * @author Nicolaas [at] sunnysideup.co.nz
+ *
+ *
+ */
+
+ul#SiteMap{}
+	ul#SiteMap li {position: relative; list-style: none; list-style-image: none;}
+			ul#SiteMap li a.siteMapPageExpander {}
+			ul#SiteMap a.pageTitle{display: block; font-size: 12px; padding:12px 0 12px 18px;}
+				ul#SiteMap a.SiteMapLevel1{font-size: 14px; font-weight: bold; border-bottom: 1px solid #efefef; padding:12px 0 12px 18px;}
+				ul#SiteMap a.SiteMapLevel2{border-bottom: 1px solid #f8f8f8;}
+
+			ul#SiteMap a.siteMapPageExpander{position: absolute; top: 10px; left: 0; border-bottom: none!important; padding:0!important; background-image: url(../images/plusMinus.png); background-repeat: no-repeat; width: 16px; height: 16px!important;display: block; text-decoration: none!important;
+									/* browser-safe hide text */ text-indent: -2000px; outline: 0; line-height: 0!important; font-size: 0px!important;}
+				ul#SiteMap a.siteMapPageExpander:hover{text-decoration: none!important; }
+				ul#SiteMap a.SiteMapNodeExpanded{background-position: 0 -16px;}
+				ul#SiteMap a.SiteMapNodeImploded{background-position: 0 0;}
+
+	ul#SiteMap ul.SubListLevel2 {padding-left: 15px;}
+	ul#SiteMap ul.SubListLevel3 {padding-left: 30px;}
+	ul#SiteMap ul.SubListLevel4 {padding-left: 45px;}
+	ul#SiteMap ul.SubListLevel5 {padding-left: 60px;}
+	ul#SiteMap ul.SubListLevel2 li.noChildrenLI {margin-left: 0px;}
+	ul#SiteMap ul.SubListLevel3 li.noChildrenLI {margin-left: -15px;}
+	ul#SiteMap ul.SubListLevel4 li.noChildrenLI {margin-left: -30px;}
+	ul#SiteMap ul.SubListLevel5 li.noChildrenLI {margin-left: -45px;}
+
