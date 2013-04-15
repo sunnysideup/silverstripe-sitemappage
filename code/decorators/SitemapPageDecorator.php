@@ -1,6 +1,6 @@
 <?php
 
-class SitemapPageDecorator extends SiteTreeDecorator {
+class SitemapPageDecorator extends SiteTreeExtension {
 
 	protected static $sitemap_classes_to_exclude = array("ErrorPage");
 		static function set_sitemap_classes_to_exclude($v) {self::$sitemap_classes_to_exclude = $v;}

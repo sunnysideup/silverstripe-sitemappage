@@ -14,17 +14,19 @@ class SiteMapPage extends Page {
 		"ShowAllPages" => "Boolean"
 	);
 
+	static $description = "Sitemap Page: shows all the pages on a site in a tree format";
+
 	static $add_action = 'Site Map Page';
 
 	static $icon = 'sitemappage/images/treeicons/SiteMapPage';
 
-	function canCreate() {
+	function canCreate($member = null) {
 		return ! DataObject::get_one('SiteMapPage');
 	}
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab("Root.Content.Display", new CheckboxField("ShowAllPages", "Show all pages from the start"));
+		$fields->addFieldToTab("Root.Display", new CheckboxField("ShowAllPages", "Show all pages from the start"));
 		return $fields;
 	}
 
