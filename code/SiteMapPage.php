@@ -39,10 +39,10 @@ class SiteMapPage_Controller extends Page_Controller {
 		if(!$this->ShowAllPages) {
 			Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
 			Requirements::javascript('sitemappage/javascript/SiteMapPage.js');
-			Requirements::themedCSS('SiteMapPage');
+			Requirements::themedCSS('SiteMapPage', "sitemappage");
 		}
 		else {
-			Requirements::themedCSS('SiteMapPageOpen');
+			Requirements::themedCSS('SiteMapPageOpen', "sitemappage");
 		}
 	}
 
