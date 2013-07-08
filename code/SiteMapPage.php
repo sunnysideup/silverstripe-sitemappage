@@ -21,7 +21,7 @@ class SiteMapPage extends Page {
 	static $icon = 'sitemappage/images/treeicons/SiteMapPage';
 
 	function canCreate($member = null) {
-		return ! DataObject::get_one('SiteMapPage');
+		return ! SiteMapPage::get()->count();
 	}
 
 	function getCMSFields() {
@@ -47,7 +47,7 @@ class SiteMapPage_Controller extends Page_Controller {
 	}
 
 	function LevelOneSiteMapPages() {
-		return DataObject::get("SiteTree", " \"ParentID\" = 0 AND ".$this->getWhereStatementForSiteMapPages());
+		return SiteTree::get()->where(" \"ParentID\" = 0 AND ".$this->getWhereStatementForSiteMapPages());
 	}
 
 

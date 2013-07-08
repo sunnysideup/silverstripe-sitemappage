@@ -11,10 +11,7 @@ class SitemapPageDecorator extends SiteTreeExtension {
 		static function get_sitemap_classes_to_include() {return self::$sitemap_classes_to_include;}
 
 	function SiteMapPages() {
-		return DataObject::get(
-			"SiteTree",
-			" \"ParentID\" = {$this->owner->ID} AND ".$this->getWhereStatementForSiteMapPages()
-		);
+		return SiteTree::get()->where(" \"ParentID\" = {$this->owner->ID} AND ".$this->getWhereStatementForSiteMapPages());
 	}
 
 
