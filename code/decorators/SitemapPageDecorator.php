@@ -2,11 +2,11 @@
 
 class SitemapPageDecorator extends SiteTreeExtension {
 
-	protected static $sitemap_classes_to_exclude = array("ErrorPage");
+	private static $sitemap_classes_to_exclude = array("ErrorPage");
 		static function set_sitemap_classes_to_exclude($v) {self::$sitemap_classes_to_exclude = $v;}
 		static function get_sitemap_classes_to_exclude() {return self::$sitemap_classes_to_exclude;}
 
-	protected static $sitemap_classes_to_include = array();
+	private static $sitemap_classes_to_include = array();
 		static function set_sitemap_classes_to_include($v) {self::$sitemap_classes_to_include = $v;}
 		static function get_sitemap_classes_to_include() {return self::$sitemap_classes_to_include;}
 
