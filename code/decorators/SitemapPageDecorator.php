@@ -3,12 +3,8 @@
 class SitemapPageDecorator extends SiteTreeExtension {
 
 	private static $sitemap_classes_to_exclude = array("ErrorPage");
-		static function set_sitemap_classes_to_exclude($v) {self::$sitemap_classes_to_exclude = $v;}
-		static function get_sitemap_classes_to_exclude() {return self::$sitemap_classes_to_exclude;}
 
 	private static $sitemap_classes_to_include = array();
-		static function set_sitemap_classes_to_include($v) {self::$sitemap_classes_to_include = $v;}
-		static function get_sitemap_classes_to_include() {return self::$sitemap_classes_to_include;}
 
 	function SiteMapPages() {
 		return SiteTree::get()->where(" \"ParentID\" = {$this->owner->ID} AND ".$this->getWhereStatementForSiteMapPages());
@@ -17,8 +13,8 @@ class SitemapPageDecorator extends SiteTreeExtension {
 
 	function getWhereStatementForSiteMapPages(){
 		$where = '1 = 1';
-		$inc = SitemapPageDecorator::get_sitemap_classes_to_include();
-		$exc = SitemapPageDecorator::get_sitemap_classes_to_exclude();
+		$inc = $this->owner->Config()->get("sitemap_classes_to_include");
+		$exc = $this->owner->Config()->("sitemap_classes_to_exclude");
 		if(is_array($inc) && count($inc)) {
 			$where = "\"ClassName\" IN ('".implode("','", $inc)."')";
 		}
