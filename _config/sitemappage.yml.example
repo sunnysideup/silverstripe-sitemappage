@@ -1,0 +1,9 @@
+SitemapPageDecorator:
+  sitemap_classes_to_exclude:
+    - HomePage
+    - MenuPage
+
+SitemapPageDecorator:
+  sitemap_classes_to_include:
+    - ProductPage
+    - CarrotPage
