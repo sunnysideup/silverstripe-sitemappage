@@ -14,7 +14,7 @@ class SitemapPageDecorator extends SiteTreeExtension {
 	function getWhereStatementForSiteMapPages(){
 		$where = '1 = 1';
 		$inc = $this->owner->Config()->get("sitemap_classes_to_include");
-		$exc = $this->owner->Config()->("sitemap_classes_to_exclude");
+		$exc = $this->owner->Config()->get("sitemap_classes_to_exclude");
 		if(is_array($inc) && count($inc)) {
 			$where = "\"ClassName\" IN ('".implode("','", $inc)."')";
 		}
