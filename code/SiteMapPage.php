@@ -10,15 +10,15 @@
 
 class SiteMapPage extends Page {
 
-	static $db = array(
+	private static $db = array(
 		"ShowAllPages" => "Boolean"
 	);
 
-	static $description = "Sitemap Page: shows all the pages on a site in a tree format";
+	private static $description = "Sitemap Page: shows all the pages on a site in a tree format";
 
-	static $add_action = 'Site Map Page';
+	private static $add_action = 'Site Map Page';
 
-	static $icon = 'sitemappage/images/treeicons/SiteMapPage';
+	private static $icon = 'sitemappage/images/treeicons/SiteMapPage';
 
 	function canCreate($member = null) {
 		return ! SiteMapPage::get()->count();
