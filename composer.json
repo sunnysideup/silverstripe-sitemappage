@@ -3,7 +3,7 @@
 	"type": "silverstripe-module",
 	"description": "adds a simple sitemap to your Silverstripe website",
 	"homepage": "http://www.silverstripe-webdevelopment.com",
-	"keywords": ["sitemappage", "silverstripe"],
+	"keywords": ["sitemappage", "silverstripe", "sitemap", "list of pages", "site tree", "sitetree"],
 	"license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
 	"authors":[
 		{
