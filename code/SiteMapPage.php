@@ -14,17 +14,17 @@ class SiteMapPage extends Page {
 		"ShowAllPages" => "Boolean"
 	);
 
-	private static $description = "Sitemap Page: shows all the pages on a site in a tree format";
+	private static $description = "Sitemap Page: shows all the pages of a site in a tree format";
 
 	private static $add_action = 'Site Map Page';
 
 	private static $icon = 'sitemappage/images/treeicons/SiteMapPage';
 
-	function canCreate($member = null) {
+	public function canCreate($member = null) {
 		return ! SiteMapPage::get()->count();
 	}
 
-	function getCMSFields() {
+	fpublic function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab("Root.Display", new CheckboxField("ShowAllPages", "Show all pages from the start"));
 		return $fields;
@@ -34,7 +34,7 @@ class SiteMapPage extends Page {
 
 class SiteMapPage_Controller extends Page_Controller {
 
-	function init() {
+	public function init() {
 		parent::init();
 		if(!$this->ShowAllPages) {
 			Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
@@ -46,7 +46,7 @@ class SiteMapPage_Controller extends Page_Controller {
 		}
 	}
 
-	function LevelOneSiteMapPages() {
+	public function LevelOneSiteMapPages() {
 		return SiteTree::get()->where(" \"ParentID\" = 0 AND ".$this->getWhereStatementForSiteMapPages());
 	}
 
