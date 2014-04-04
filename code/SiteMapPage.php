@@ -24,7 +24,7 @@ class SiteMapPage extends Page {
 		return ! SiteMapPage::get()->count();
 	}
 
-	fpublic function getCMSFields() {
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab("Root.Display", new CheckboxField("ShowAllPages", "Show all pages from the start"));
 		return $fields;
