@@ -1,6 +1,5 @@
-###############################################
 Site Map Page
-###############################################
+================================================================================
 
 Adds a basic sitemap page to your site with plenty
 of customistation options (themed CSS).
