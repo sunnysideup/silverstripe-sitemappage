@@ -36,12 +36,3 @@ Installation Instructions
 In the _config/ folder of this module
 you can usually find some examples of config options (if any).
 
-3. IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
-add the following code to your Page.php Page Class (NOT CONTROLLER CLASS):
-
-	function SiteMapPages() {
-		return DataObject::get("SiteTree", "ParentID = ".$this->ID." AND ShowInMenus = 1 AND ClassName <> 'SiteMapPage'");
-	}
-
-
-you can edit this function as you see fit!

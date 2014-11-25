@@ -34,27 +34,26 @@ class SitemapPageDecorator extends SiteTreeExtension {
 	 * @return DataList
 	 */
 	function SiteMapPages() {
-		return SiteTree::get()->where(" \"ParentID\" = {$this->owner->ID} AND ".$this->getWhereStatementForSiteMapPages());
-	}
-
-
-	/**
-	 *
-	 * @return String
-	 */
-	protected function getWhereStatementForSiteMapPages(){
-		$where = '1 = 1';
+		$filterArray = array(
+			"ParentID" => $this->owner->ID,
+			"ShowInMenus" => 1,
+			"ShowInSearch" => 1
+		);
+		$excludeArray = array("ClassName" => 'SiteMapPage');
 		$inc = Config::inst()->get("SitemapPageDecorator", "sitemap_classes_to_include");
 		$exc = Config::inst()->get("SitemapPageDecorator", "sitemap_classes_to_exclude");
 		if(is_array($inc) && count($inc)) {
-			$where = "\"ClassName\" IN ('".implode("','", $inc)."')";
+			$filterArray["ClassName"] = $inc;
 		}
 		elseif(is_array($exc) && count($exc)) {
-			$where = "\"ClassName\" NOT IN ('".implode("','", $exc)."')";
+			$excludeArray["ClassName"] = $exc;
 		}
-		$where .= " AND \"ShowInMenus\" = 1 AND \"ShowInSearch\" = 1 AND \"ClassName\" <> 'SiteMapPage'  ";
-		return $where;
+		return SiteTree::get()
+			->filter($filterArray)
+			->exclude($excludeArray);
 	}
+
+
 
 
 }
