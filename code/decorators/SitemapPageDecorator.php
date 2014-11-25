@@ -35,7 +35,7 @@ class SitemapPageDecorator extends SiteTreeExtension {
 	 */
 	function SiteMapPages($noParent = false) {
 		if($noParent) {
-			$parentID = 0
+			$parentID = 0;
 		}
 		else {
 			$parentID = $this->owner->ID;
