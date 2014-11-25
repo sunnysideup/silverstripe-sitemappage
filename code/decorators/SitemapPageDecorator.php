@@ -33,9 +33,15 @@ class SitemapPageDecorator extends SiteTreeExtension {
 	/**
 	 * @return DataList
 	 */
-	function SiteMapPages() {
+	function SiteMapPages($noParent = false) {
+		if($noParent) {
+			$parentID = 0
+		}
+		else {
+			$parentID = $this->owner->ID;
+		}
 		$filterArray = array(
-			"ParentID" => $this->owner->ID,
+			"ParentID" => $parentID,
 			"ShowInMenus" => 1,
 			"ShowInSearch" => 1
 		);

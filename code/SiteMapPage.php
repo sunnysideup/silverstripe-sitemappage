@@ -47,7 +47,8 @@ class SiteMapPage_Controller extends Page_Controller {
 	}
 
 	public function LevelOneSiteMapPages() {
-		return SiteTree::get()->where(" \"ParentID\" = 0 AND ".$this->getWhereStatementForSiteMapPages());
+		$homePage = SiteTree::get()->filter(array("ParentID" => 0))->first();
+		return $homePage->SiteMapPages($noParent = true);
 	}
 
 
