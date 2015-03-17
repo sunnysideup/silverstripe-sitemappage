@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/var/www/_modules/sitemappage/trunk">
+    <file name="_config.php" size="63" time="2015-03-14T10:23:12+13:00" unixtime="1426281792" sha1="282634dbb22b404582288b0f3d7ac8151ea05098" xml="tokens/_config.php.xml"/>
+    <dir name="code">
+      <file name="SiteMapPage.php" size="1314" time="2015-03-14T10:23:12+13:00" unixtime="1426281792" sha1="66bc512336e336934664e11651c6fea6dc2f5431" xml="tokens/code/SiteMapPage.php.xml"/>
+      <dir name="decorators">
+        <file name="SitemapPageDecorator.php" size="1786" time="2015-03-14T10:23:12+13:00" unixtime="1426281792" sha1="dd5f91899d1c4c1bae01e8c20d884021663da888" xml="tokens/code/decorators/SitemapPageDecorator.php.xml"/>
+      </dir>
+    </dir>
+  </dir>
+</source>

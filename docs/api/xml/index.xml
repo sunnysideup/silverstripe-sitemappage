@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/_modules/sitemappage/trunk">
+  <namespace name="">
+    <class name="SiteMapPage" src="code/SiteMapPage.php" xml="classes/SiteMapPage.xml"/>
+    <class name="SiteMapPage_Controller" src="code/SiteMapPage.php" xml="classes/SiteMapPage_Controller.xml"/>
+    <class name="SitemapPageDecorator" src="code/decorators/SitemapPageDecorator.php" xml="classes/SitemapPageDecorator.xml"/>
+  </namespace>
+</index>
