@@ -1,3 +1,8 @@
+###################################
+# sitemappage
+###################################
+
+
 SitemapPageDecorator:
   sitemap_classes_to_exclude:
     - HomePage
@@ -7,3 +12,6 @@ SitemapPageDecorator:
   sitemap_classes_to_include:
     - ProductPage
     - CarrotPage
+
+###################################
+###################################
