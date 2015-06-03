@@ -34,7 +34,7 @@ var sitemappage = {
 		jQuery(sitemappage.expanderASelector).addClass(sitemappage.implodedClass);
 		jQuery(sitemappage.expanderASelector).click(
 			function() {
-				var id = jQuery(this).attr('rel');
+				var id = jQuery(this).attr('data-id');
 				var idSelector = sitemappage.idSelectorPrepend + id;
 				if(jQuery(this).hasClass(sitemappage.implodedClass) && jQuery(idSelector).length > 0) {
 					jQuery(idSelector).slideDown(sitemappage.speed);
