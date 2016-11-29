@@ -3,8 +3,10 @@
     "type": "silverstripe-module",
     "description": "adds a simple sitemap to your Silverstripe website",
     "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
         "sitemappage",
-        "silverstripe",
         "sitemap",
         "list of pages",
         "site tree",
