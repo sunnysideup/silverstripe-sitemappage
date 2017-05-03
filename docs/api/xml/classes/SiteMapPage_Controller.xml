@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="SiteMapPage_Controller" namespace="" name="SiteMapPage_Controller" abstract="false" final="false" start="35" end="55">
-  <file path="/var/www/_modules/sitemappage/trunk/docs/en/phpdox/../../../code" file="SiteMapPage.php" realpath="/var/www/_modules/sitemappage/trunk/code/SiteMapPage.php" size="1314" time="2015-03-14T10:23:12+13:00" unixtime="1426281792" sha1="66bc512336e336934664e11651c6fea6dc2f5431" relative="code/SiteMapPage.php"/>
-  <extends full="Page_Controller" namespace="" name="Page_Controller"/>
-  <method name="init" start="37" end="47" abstract="false" final="false" static="false" visibility="public"/>
-  <method name="LevelOneSiteMapPages" start="49" end="52" abstract="false" final="false" static="false" visibility="public"/>
-</class>
